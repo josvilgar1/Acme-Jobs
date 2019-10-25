@@ -16,5 +16,34 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	
+	<!-- Announcement -->
+	
+	<bean id="announcement01" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Announcement 1"/>
+		<property name="moment" value="2019/06/1 10:00"/>
+		<property name="url" value="https://cat-bounce.com/"/>
+		<property name="text" value="Texto del anuncio 1 de prueba para ver si sale bien"/>
+	</bean>
 
+	<bean id="announcement02" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Announcement 2"/>
+		<property name="moment" value="2019/07/1 11:00"/>
+		<property name="url"><null/></property>
+		<property name="text" value="Texto del anuncio 2 de prueba para ver si sale bien"/>
+	</bean>
+
+	<bean id="announcement03" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Announcement 3"/>
+		<property name="moment" value="2019/08/1 12:00"/>
+		<property name="url" value="https://sevius.us.es/"/>
+		<property name="text" value="Texto del anuncio 3 de prueba para ver si sale bien"/>
+	</bean>
+	
+	<bean id="announcement04" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Announcement 4"/>
+		<property name="moment" value="2019/10/19 12:00"/>
+		<property name="url"><null/></property>
+		<property name="text" value="Texto del anuncio 4, este está en fecha hoy 26 de octubre"/>
+	</bean>
 </beans>
