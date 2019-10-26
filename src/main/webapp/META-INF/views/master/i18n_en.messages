@@ -42,6 +42,7 @@ master.menu.administrator.shutdown = Shut down
 # master.menu.authenticated ###################################################
 master.menu.authenticated = User Options
 master.menu.authenticated.announcement = List Announcements
+master.menu.authenticated.challenge = List Challenges
 
 # master.menu.provider ########################################################
 
