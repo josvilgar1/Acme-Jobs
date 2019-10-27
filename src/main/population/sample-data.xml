@@ -16,5 +16,25 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
-
+	
+	<bean id="investorrecord01" class="acme.entities.investorrecords.Investorrecord">
+		<property name="name" value="John Bogle"/>
+		<property name="sector" value="Manufacturing"/>
+		<property name="statement" value="Statement1"/>
+		<property name="stars" value="2"/>
+	</bean>
+	
+	<bean id="investorrecord02" class="acme.entities.investorrecords.Investorrecord">
+		<property name="name" value="Warren Buffet"/>
+		<property name="sector" value="Construction"/>
+		<property name="statement" value="Statement2"/>
+		<property name="stars" value="5"/>
+	</bean>
+	
+	<bean id="investorrecord03" class="acme.entities.investorrecords.Investorrecord">
+		<property name="name" value="Benjamin Graham"/>
+		<property name="sector" value="Mining"/>
+		<property name="statement" value="Statement3"/>
+		<property name="stars" value="1"/>
+	</bean>
 </beans>
