@@ -316,7 +316,7 @@ Offer
 +moment: Date {Temporal(TIMESTAMP), Past}
 +deadline: Date {Temporal(TIMESTAMP), Future}
 +text: String {NotBlank}
-+ticker: String {Unique, NotBlank, Pattern(^O\w{4}-\d{4}$)}
++ticker: String {Unique, NotBlank, Pattern(^O\R[A-Z]{4}-\d{4}$)}
 +rangeMin: Money {NotBlank}
 +rangeMax: Money {NotBlank}
  </panel_attributes>

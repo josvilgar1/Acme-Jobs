@@ -15,7 +15,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form>
+<acme:form readonly="true">
 	<acme:form-textbox code="authenticated.offer.form.label.title" path="title"/>
 	<acme:form-moment code="authenticated.offer.form.label.moment" path="moment"/>
 	<acme:form-moment code="authenticated.offer.form.label.deadline" path="deadline"/>
@@ -24,6 +24,5 @@
 	<acme:form-money code="authenticated.offer.form.label.rangeMin" path="rangeMin"/>
 	<acme:form-money code="authenticated.offer.form.label.rangeMax" path="rangeMax"/>
 	
-	<acme:form-submit code="authenticated.offer.form.button.create" action="/authenticated/offer/create"/>
   	<acme:form-return code="authenticated.offer.form.button.return"/>
 </acme:form>
