@@ -16,5 +16,32 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	
+	<bean name="request01" class="acme.entities.request.Request">
+		<property name="title" value="title 01" />
+		<property name="moment" value="2019/10/25 10:00" />
+		<property name="deadline" value="2019/11/25 10:00" />
+		<property name="text" value="text 01" />
+		<property name="reward" value="100€" />
+		<property name="ticker" value="RAAAA-0001" />
+	</bean>
 
+	<bean name="request02" class="acme.entities.request.Request">
+		<property name="title" value="title 02" />
+		<property name="moment" value="2019/10/25 10:00" />
+		<property name="deadline" value="2019/11/25 10:00" />
+		<property name="text" value="text 02" />
+		<property name="reward" value="200€" />
+		<property name="ticker" value="RAAAA-0002" />
+	</bean>
+	
+	<bean name="request03" class="acme.entities.request.Request">
+		<property name="title" value="title 03" />
+		<property name="moment" value="2019/10/25 10:00" />
+		<property name="deadline" value="2019/11/25 10:00" />
+		<property name="text" value="text 03" />
+		<property name="reward" value="300€" />
+		<property name="ticker" value="RAAAA-0003" />
+	</bean>
+	
 </beans>

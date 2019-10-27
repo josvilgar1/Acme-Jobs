@@ -37,6 +37,11 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated.request.list=Listar solicitudes
+master.menu.authenticated.request.form=Mostrar solicitudes
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
