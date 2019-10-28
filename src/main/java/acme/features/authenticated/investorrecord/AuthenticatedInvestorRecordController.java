@@ -1,5 +1,5 @@
 
-package acme.features.anonymous.investorrecord;
+package acme.features.authenticated.investorrecord;
 
 import javax.annotation.PostConstruct;
 
@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import acme.entities.investorrecords.Investorrecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Anonymous;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/anonymous/investorrecord/")
-public class AnonymousInvestorRecordController extends AbstractController<Anonymous, Investorrecord> {
+@RequestMapping("/authenticated/investorrecord/")
+public class AuthenticatedInvestorRecordController extends AbstractController<Authenticated, Investorrecord> {
 
 	//Internal State	----------------------------------------
 
 	@Autowired
-	private AnonymousInvestorRecordListService	listService;
+	private AuthenticatedInvestorRecordListService	listService;
 
 	@Autowired
-	private AnonymousInvestorRecordShowService	showService;
+	private AuthenticatedInvestorRecordShowService	showService;
 
 
 	//Constructors 	--------------------------------------------
