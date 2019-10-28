@@ -13,7 +13,7 @@ import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Anonymous;
 
 @Controller
-@RequestMapping("/Anonymous/investorrecord/")
+@RequestMapping("/anonymous/investorrecord/")
 public class AnonymousInvestorRecordController extends AbstractController<Anonymous, Investorrecord> {
 
 	//Internal State	----------------------------------------
@@ -28,7 +28,7 @@ public class AnonymousInvestorRecordController extends AbstractController<Anonym
 	//Constructors 	--------------------------------------------
 
 	@PostConstruct
-	private void inizialise() {
+	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
