@@ -30,6 +30,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `challenge` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `goalreward` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `companyrecord` (
        `id` integer not null,
         `version` integer not null,
@@ -42,16 +52,6 @@
         `sector` varchar(255),
         `stars` integer,
         `web` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `challenge` (
-       `id` integer not null,
-        `version` integer not null,
-        `deadline` datetime(6),
-        `description` varchar(255),
-        `goalreward` varchar(255),
-        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
