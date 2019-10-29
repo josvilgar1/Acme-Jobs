@@ -19,6 +19,7 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+		 	<acme:menu-suboption code="master.menu.anonymous.companyrecord" action="/anonymous/companyrecord/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.announcement" action="/anonymous/announcement/list"/>
 		</acme:menu-option>
 
@@ -34,6 +35,8 @@
 			<acme:menu-suboption code="master.menu.authenticated.announcement" action="/authenticated/announcement/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.challenge" action="/authenticated/challenge/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.request" action="/authenticated/request/list"/>
+      <acme:menu-suboption code="master.menu.authenticated.companyrecord" action="/authenticated/companyrecord/list"/>
+		 	<acme:menu-suboption code="master.menu.authenticated.offer" action="/authenticated/offer/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
@@ -43,7 +46,6 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
-		
 	</acme:menu-left>
 
 	<acme:menu-right>

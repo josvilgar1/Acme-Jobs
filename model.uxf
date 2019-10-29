@@ -310,13 +310,15 @@ Announcement
       <h>133</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Request
+Offer
 --
 +title: String {NotBlank}
 +moment: Date {Temporal(TIMESTAMP), Past}
 +deadline: Date {Temporal(TIMESTAMP), Future}
 +text: String {NotBlank}
-+ticker: String {Unique, NotBlank, Pattern(RXXXX-99999)}
++ticker: String {Unique, NotBlank, Pattern(^O\R[A-Z]{4}-\d{4}$)}
++rangeMin: Money {NotBlank}
++rangeMax: Money {NotBlank}
  </panel_attributes>
     <additional_attributes/>
   </element>
@@ -356,7 +358,7 @@ Company Records
 +ceo: String {NotBlank}
 +description: String {NotBlank}
 +web: String {NotBlank, Url}
-+phone: String {Unique, NotBlank, Pattern([\+]\d{3}[\(]\d{4}[\)]\d{6,10})}
++phone: String {Unique, NotBlank, Pattern([\+]\d{1,3}[\(]\d{1,4}[\)]\d{6,10})}
 +email: String {Unique, NotBlank, Email}
 +incorporated: boolean
 +stars: Integer {Range(1,5)}</panel_attributes>

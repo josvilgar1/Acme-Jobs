@@ -30,6 +30,21 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `companyrecord` (
+       `id` integer not null,
+        `version` integer not null,
+        `ceo` varchar(255),
+        `description` varchar(255),
+        `email` varchar(255),
+        `incorporated` bit,
+        `name` varchar(255),
+        `phone` varchar(255),
+        `sector` varchar(255),
+        `stars` integer,
+        `web` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -46,6 +61,21 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `offer` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `moment` datetime(6),
+        `range_max_amount` double precision,
+        `range_max_currency` varchar(255),
+        `range_min_amount` double precision,
+        `range_min_currency` varchar(255),
+        `text` varchar(255),
+        `ticker` varchar(255),
+        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
