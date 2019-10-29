@@ -29,14 +29,44 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
+
 master.menu.anonymous.favourite-link = Favourite link
-master.menu.anonymous.investorrecords.list = List investor records
+
+master.menu.anonymous.investorrecords = List investor records
+
+master.menu.anonymous.announcement = List Announcements
+
+# master.menu.anonymous.companyrecord #######################################################
+
+master.menu.anonymous.companyrecord = Company Records
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+
+# master.menu.authenticated.companyrecord #######################################################
+
+master.menu.authenticated.companyrecord = Company Records
+
+# master.menu.authenticated.offer #######################################################
+
+master.menu.authenticated.offer = Offers
+
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
+master.menu.administrator.announcement = List Announcements
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = User Options
+master.menu.authenticated.announcement = List Announcements
+master.menu.authenticated.challenge = List Challenges
+master.menu.authenticated.request = List Requests
+master.menu.authenticated.investorrecords = List Investor Records
 
 # master.menu.provider ########################################################
 
@@ -92,3 +122,4 @@ master.license.text = \
 	automatically for a maximum of 31 days, and "language" to store your language \
 	preferences. Additionally, we store an item called "returnStack" in your browser's \
 	local storage to keep track of the document to which some buttons must return.
+	

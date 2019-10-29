@@ -20,17 +20,26 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.investorrecords.list" action="/anonymous/investorrecord/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.investorrecords" action="/anonymous/investorrecord/list"/>
+		 	<acme:menu-suboption code="master.menu.anonymous.companyrecord" action="/anonymous/companyrecord/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.announcement" action="/anonymous/announcement/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.menu.administrator.announcement" action="/administrator/announcement/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
-	
-		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.authenticated.investorrecords.list" action="/authenticated/investorrecord/list"/>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+      <acme:menu-suboption code="master.menu.authenticated.investorrecords" action="/authenticated/investorrecord/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.announcement" action="/authenticated/announcement/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.challenge" action="/authenticated/challenge/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.request" action="/authenticated/request/list"/>
+      <acme:menu-suboption code="master.menu.authenticated.companyrecord" action="/authenticated/companyrecord/list"/>
+		 	<acme:menu-suboption code="master.menu.authenticated.offer" action="/authenticated/offer/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
