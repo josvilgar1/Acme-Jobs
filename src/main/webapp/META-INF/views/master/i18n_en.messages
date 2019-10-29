@@ -43,6 +43,7 @@ master.menu.administrator.shutdown = Shut down
 master.menu.authenticated = User Options
 master.menu.authenticated.announcement = List Announcements
 master.menu.authenticated.challenge = List Challenges
+master.menu.authenticated.request = List Requests
 
 # master.menu.provider ########################################################
 
@@ -98,3 +99,4 @@ master.license.text = \
 	automatically for a maximum of 31 days, and "language" to store your language \
 	preferences. Additionally, we store an item called "returnStack" in your browser's \
 	local storage to keep track of the document to which some buttons must return.
+	
