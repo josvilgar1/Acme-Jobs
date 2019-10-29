@@ -338,7 +338,7 @@ Request
 +deadline: Date {Temporal(TIMESTAMP), Future}
 +text: String {NotBlank}
 +reward: Money {NotBlank}
-+ticker: String {Unique, NotBlank, Pattern(RXXXX-99999)}
++ticker: String {Unique, NotBlank, Pattern(^R[A-Z]{4}-\d{4}$)}
  </panel_attributes>
     <additional_attributes/>
   </element>
@@ -395,7 +395,25 @@ Challenges
 +title: String {NotBlank}
 +deadline: Date {Temporal(TIMESTAMP), Future}
 +description: String {NotBlank}
-+goalreward: Map&lt;Integer,String&gt; {NotBlank, String(Gold, Silver, Bronze)}</panel_attributes>
++goalreward: Map&lt;String,Reward&gt; {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>252</y>
+      <w>154</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Reward
+--
++ BRONZE
++ SILVER
++ GOLD
+
+bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

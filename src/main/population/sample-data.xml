@@ -30,6 +30,7 @@
 		<property name="incorporated" value="true"/>
 		<property name="stars" value="1"/>
 	</bean>
+  
 	<bean id="companyrecord02" class="acme.entities.companyrecords.Companyrecord">
 		<property name="name" value="Name 2"/>
 		<property name="sector" value="Sector 2"/>
@@ -41,6 +42,7 @@
 		<property name="incorporated" value="true"/>
 		<property name="stars" value="2"/>
 	</bean>
+  
 	<bean id="companyrecord03" class="acme.entities.companyrecords.Companyrecord">
 		<property name="name" value="Name 3"/>
 		<property name="sector" value="Sector 3"/>
@@ -52,6 +54,7 @@
 		<property name="incorporated" value="false"/>
 		<property name="stars" value="3"/>
 	</bean>
+  
 	<bean id="companyrecord04" class="acme.entities.companyrecords.Companyrecord">
 		<property name="name" value="Name 4"/>
 		<property name="sector" value="Sector 4"/>
@@ -75,6 +78,7 @@
 		<property name="rangeMin" value="100€"/>
 		<property name="rangeMax" value="5000€"/>
 	</bean>
+  
 	<bean id="offer02" class="acme.entities.offers.Offer">
 		<property name="title" value="Title 2"/>
 		<property name="moment" value="2019/06/2 10:00"/>
@@ -84,6 +88,7 @@
 		<property name="rangeMin" value="200€"/>
 		<property name="rangeMax" value="5000€"/>
 	</bean>
+  
 	<bean id="offer03" class="acme.entities.offers.Offer">
 		<property name="title" value="Title 3"/>
 		<property name="moment" value="2019/06/3 10:00"/>
@@ -93,6 +98,7 @@
 		<property name="rangeMin" value="300€"/>
 		<property name="rangeMax" value="5000€"/>
 	</bean>
+  
 	<bean id="offer04" class="acme.entities.offers.Offer">
 		<property name="title" value="Title 4"/>
 		<property name="moment" value="2019/06/4 10:00"/>
@@ -101,6 +107,87 @@
 		<property name="ticker" value="OAAAA-4444"/>
 		<property name="rangeMin" value="400€"/>
 		<property name="rangeMax" value="5000€"/>
+   </bean>
+  
+  <!-- Request -->
+  
+	<bean name="request01" class="acme.entities.request.Request">
+		<property name="title" value="title 01" />
+		<property name="moment" value="2019/10/25 10:00" />
+		<property name="deadline" value="2019/11/25 10:00" />
+		<property name="text" value="text 01" />
+		<property name="reward" value="100€" />
+		<property name="ticker" value="RAAAA-0001" />
 	</bean>
 
+	<bean name="request02" class="acme.entities.request.Request">
+		<property name="title" value="title 02" />
+		<property name="moment" value="2019/10/25 10:00" />
+		<property name="deadline" value="2019/11/25 10:00" />
+		<property name="text" value="text 02" />
+		<property name="reward" value="200€" />
+		<property name="ticker" value="RAAAA-0002" />
+	</bean>
+	
+	<bean name="request03" class="acme.entities.request.Request">
+		<property name="title" value="title 03" />
+		<property name="moment" value="2019/10/25 10:00" />
+		<property name="deadline" value="2019/11/25 10:00" />
+		<property name="text" value="text 03" />
+		<property name="reward" value="300€" />
+		<property name="ticker" value="RAAAA-0003" />
+  </bean>
+
+	<!-- Announcement -->
+	
+	<bean id="announcement01" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Announcement 1"/>
+		<property name="moment" value="2019/06/1 10:00"/>
+		<property name="url" value="https://cat-bounce.com/"/>
+		<property name="text" value="Texto del anuncio 1 de prueba para ver si sale bien"/>
+	</bean>
+
+	<bean id="announcement02" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Announcement 2"/>
+		<property name="moment" value="2019/07/1 11:00"/>
+		<property name="url"><null/></property>
+		<property name="text" value="Texto del anuncio 2 de prueba para ver si sale bien"/>
+	</bean>
+
+	<bean id="announcement03" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Announcement 3"/>
+		<property name="moment" value="2019/08/1 12:00"/>
+		<property name="url" value="https://sevius.us.es/"/>
+		<property name="text" value="Texto del anuncio 3 de prueba para ver si sale bien"/>
+	</bean>
+	
+	<bean id="announcement04" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Announcement 4"/>
+		<property name="moment" value="2019/10/19 12:00"/>
+		<property name="url"><null/></property>
+		<property name="text" value="Texto del anuncio 4, este está en fecha hoy 26 de octubre"/>
+	</bean>
+	
+	<!-- Challenge -->
+	
+	<bean id="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Challenge 1"/>
+		<property name="deadline" value="2021/06/1 10:00"/>
+		<property name="description" value="Texto de descripcion del challenge 1"/>
+		<property name="goalreward" value="GOAL REWARD 1"/>
+	</bean>
+	
+	<bean id="challenge02" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Challenge 2"/>
+		<property name="deadline" value="2021/07/1 10:00"/>
+		<property name="description" value="Texto de descripcion del challenge 2"/>
+		<property name="goalreward" value="GOAL REWARD 2"/>
+	</bean>
+	
+	<bean id="challenge03" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Challenge 3"/>
+		<property name="deadline" value="2021/08/1 10:00"/>
+		<property name="description" value="Texto de descripcion del challenge 3"/>
+		<property name="goalreward" value="GOAL REWARD 3"/>
+	</bean>
 </beans>
