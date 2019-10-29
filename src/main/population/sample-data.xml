@@ -17,8 +17,31 @@
 
 	<import resource="conversion-service.xml" />
 	
+  <!-- Investorrecord -->
+  
+	<bean id="investorrecord01" class="acme.entities.investorrecords.Investorrecord">
+		<property name="name" value="John Bogle"/>
+		<property name="sector" value="Manufacturing"/>
+		<property name="statement" value="Statement1"/>
+		<property name="stars" value="2"/>
+	</bean>
+	
+	<bean id="investorrecord02" class="acme.entities.investorrecords.Investorrecord">
+		<property name="name" value="Warren Buffet"/>
+		<property name="sector" value="Construction"/>
+		<property name="statement" value="Statement2"/>
+		<property name="stars" value="5"/>
+	</bean>
+	
+	<bean id="investorrecord03" class="acme.entities.investorrecords.Investorrecord">
+		<property name="name" value="Benjamin Graham"/>
+		<property name="sector" value="Mining"/>
+		<property name="statement" value="Statement3"/>
+		<property name="stars" value="1"/>
+  </bean>
+  
 	<!-- Companyrecord -->
-
+    
 	<bean id="companyrecord01" class="acme.entities.companyrecords.Companyrecord">
 		<property name="name" value="Name 1"/>
 		<property name="sector" value="Sector 1"/>

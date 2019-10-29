@@ -16,9 +16,11 @@
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.investorrecords" action="/anonymous/investorrecord/list"/>
 		 	<acme:menu-suboption code="master.menu.anonymous.companyrecord" action="/anonymous/companyrecord/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.announcement" action="/anonymous/announcement/list"/>
 		</acme:menu-option>
@@ -32,6 +34,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+      <acme:menu-suboption code="master.menu.authenticated.investorrecords" action="/authenticated/investorrecord/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.announcement" action="/authenticated/announcement/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.challenge" action="/authenticated/challenge/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.request" action="/authenticated/request/list"/>
@@ -46,6 +49,7 @@
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
