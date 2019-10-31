@@ -29,29 +29,11 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-
 master.menu.anonymous.favourite-link = Favourite link
-
 master.menu.anonymous.investorrecords = List investor records
-
 master.menu.anonymous.announcement = List Announcements
-
-# master.menu.anonymous.companyrecord #######################################################
-
-master.menu.anonymous.companyrecord = Company Records
-
-# master.menu.authenticated #######################################################
-
-master.menu.authenticated = Authenticated
-
-# master.menu.authenticated.companyrecord #######################################################
-
-master.menu.authenticated.companyrecord = Company Records
-
-# master.menu.authenticated.offer #######################################################
-
-master.menu.authenticated.offer = Offers
-
+master.menu.anonymous.companyrecord.all = All Company Records
+master.menu.anonymous.companyrecord.best = Top Company Records
 
 # master.menu.administrator ###################################################
 
@@ -61,7 +43,9 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 
 # master.menu.authenticated ###################################################
-
+master.menu.authenticated = Authenticated
+master.menu.authenticated.companyrecord = Company Records
+master.menu.authenticated.offer = Offers
 master.menu.authenticated = User Options
 master.menu.authenticated.announcement = List Announcements
 master.menu.authenticated.challenge = List Challenges
