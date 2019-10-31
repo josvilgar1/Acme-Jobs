@@ -32,7 +32,9 @@ master.menu.anonymous = Anónimo
 
 master.menu.anonymous.favourite-link = Enlace favorito
 
-master.menu.anonymous.investorrecords = Listar archivos de inversionistas
+master.menu.anonymous.investorrecords.all = Archivos de inversionistas
+
+master.menu.anonymous.investorrecords.best = Mejores archivos de inversionistas
 
 master.menu.anonymous.announcement = Listar Anuncios
 

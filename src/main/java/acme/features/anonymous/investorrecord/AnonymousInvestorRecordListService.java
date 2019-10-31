@@ -39,8 +39,11 @@ public class AnonymousInvestorRecordListService implements AbstractListService<A
 		assert request != null;
 
 		Collection<Investorrecord> result;
-
-		result = this.repository.findMany();
+		if (request.getModel().getBoolean("onlybest")) {
+			result = this.repository.findManyBest();
+		} else {
+			result = this.repository.findMany();
+		}
 
 		return result;
 	}

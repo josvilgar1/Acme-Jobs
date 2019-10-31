@@ -32,7 +32,9 @@ master.menu.anonymous = Anonymous
 
 master.menu.anonymous.favourite-link = Favourite link
 
-master.menu.anonymous.investorrecords = List investor records
+master.menu.anonymous.investorrecords.best = Top investor records
+
+master.menu.anonymous.investorrecords.all = Investor records
 
 master.menu.anonymous.announcement = List Announcements
 
