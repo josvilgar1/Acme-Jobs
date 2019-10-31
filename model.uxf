@@ -416,4 +416,19 @@ Reward
 bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>595</y>
+      <w>483</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Spam
+--
++words: List&lt;String&gt; {ElementCollection, NotEmpty}
++threshold: BigDecimal {Digits(integer = 3, fraction = 2), DecimalMin("0.00"), DecimalMax("100.00"), NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>

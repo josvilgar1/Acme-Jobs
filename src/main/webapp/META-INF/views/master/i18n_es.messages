@@ -57,6 +57,7 @@ master.menu.authenticated.offer = Ofertas
 master.menu.administrator = Administrador
 master.menu.administrator.announcement = Listar Anuncios
 master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.spam = Palabras spam
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.authenticated ###################################################
