@@ -30,6 +30,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `url` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -37,6 +46,16 @@
         `description` varchar(255),
         `goalreward` varchar(255),
         `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `commercial` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `url` varchar(255),
+        `credit_card` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -64,7 +83,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-
     create table `investorrecord` (
        `id` integer not null,
         `version` integer not null,
@@ -72,6 +90,16 @@
         `sector` varchar(255),
         `stars` integer,
         `statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `noncommercial` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `url` varchar(255),
+        `jingle` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -87,7 +115,6 @@
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
-
         primary key (`id`)
     ) engine=InnoDB;
 
