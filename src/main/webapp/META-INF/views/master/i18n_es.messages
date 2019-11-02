@@ -16,8 +16,8 @@ master.banner.background = #BDD7EE
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
-	Bienvenidos a Acme Stater!  Nunca antes ha sido tan sencillo desarrollar un \
-	proyecto y hacerlo funcionar.
+	Bienvenidos a Acme Jobs!  Nunca antes ha sido tan sencillo encontrar un \
+	trabajo!
 
 # master.menu #################################################################
 
@@ -34,7 +34,7 @@ master.menu.anonymous.favourite-link = Enlace favorito
 
 master.menu.anonymous.investorrecords.all = Archivos de inversionistas
 
-master.menu.anonymous.investorrecords.best = Mejores archivos de inversionistas
+master.menu.anonymous.investorrecords.best = Top archivos de inversionistas
 
 master.menu.anonymous.announcement = Listar Anuncios
 

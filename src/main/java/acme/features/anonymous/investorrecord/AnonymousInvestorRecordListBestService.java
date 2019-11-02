@@ -13,7 +13,7 @@ import acme.framework.entities.Anonymous;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousInvestorRecordListService implements AbstractListService<Anonymous, Investorrecord> {
+public class AnonymousInvestorRecordListBestService implements AbstractListService<Anonymous, Investorrecord> {
 
 	@Autowired
 	AnonymousInvestorRecordRepository repository;
@@ -31,7 +31,7 @@ public class AnonymousInvestorRecordListService implements AbstractListService<A
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "sector");
+		request.unbind(entity, model, "name", "sector", "stars");
 	}
 
 	@Override
@@ -40,9 +40,8 @@ public class AnonymousInvestorRecordListService implements AbstractListService<A
 
 		Collection<Investorrecord> result;
 
-		result = this.repository.findMany();
+		result = this.repository.findManyBest();
 
 		return result;
 	}
-
 }

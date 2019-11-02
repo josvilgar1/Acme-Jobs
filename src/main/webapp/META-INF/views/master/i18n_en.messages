@@ -16,8 +16,8 @@ master.banner.background = #BDD7EE
 
 master.welcome.title = Welcome!
 master.welcome.text = \
-	Welcome to Starter Project! Never before has it bee easier to get your \
-	project up and running!
+	Welcome to Acme Jobs! Never before has it been easier to get your \
+	Job!
 
 # master.menu #################################################################
 
@@ -32,9 +32,9 @@ master.menu.anonymous = Anonymous
 
 master.menu.anonymous.favourite-link = Favourite link
 
-master.menu.anonymous.investorrecords.best = Top investor records
-
 master.menu.anonymous.investorrecords.all = Investor records
+
+master.menu.anonymous.investorrecords.best = Top investor records
 
 master.menu.anonymous.announcement = List Announcements
 
