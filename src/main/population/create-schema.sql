@@ -64,7 +64,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-
     create table `investorrecord` (
        `id` integer not null,
         `version` integer not null,
@@ -87,7 +86,6 @@
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
-
         primary key (`id`)
     ) engine=InnoDB;
 

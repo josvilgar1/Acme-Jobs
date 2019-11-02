@@ -33,7 +33,6 @@
 
     drop table if exists `consumer`;
 
-
     drop table if exists `investorrecord`;
 
     drop table if exists `offer`;

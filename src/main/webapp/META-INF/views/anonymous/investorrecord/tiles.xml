@@ -10,8 +10,13 @@
 		<put-attribute name="body" type="template" value="../anonymous/investorrecord/list.jsp" />
 	</definition>
 	
+	<definition name="anonymous/investorrecord/list-best" extends="master">
+		<put-attribute name="body" type="template" value="../anonymous/investorrecord/list.jsp" />
+	</definition>
+	
 	<definition name="anonymous/investorrecord/form" extends="master">
 		<put-attribute name="body" type="template" value="../anonymous/investorrecord/show.jsp" />
 	</definition>
+	
 
 </tiles-definitions>
