@@ -55,6 +55,7 @@ master.menu.authenticated.offer = Ofertas
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.dashboard = Panel
 master.menu.administrator.announcement = Listar Anuncios
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
