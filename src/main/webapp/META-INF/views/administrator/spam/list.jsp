@@ -16,12 +16,11 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<jstl:forEach var="${spam}" items="word">
-	<acme:message code="word"/>
+<acme:form-double code="administrator.spam.list.label.threshold" path="threshold" readonly="true" />
+
+<acme:form-panel code="administrator.spam.list.label.word"/>
+<acme:menu-separator/>
+<jstl:forEach var="word" items="${words}">
+	<acme:message code="${word}"/>
+	<acme:menu-separator/>
 </jstl:forEach>
-
-<%-- <acme:list>
-	<acme:list-column code="administrator.spam.list.label.word" path="words" width="40%"/>
-</acme:list> --%>
-
-

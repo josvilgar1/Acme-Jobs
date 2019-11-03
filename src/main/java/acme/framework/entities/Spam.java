@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Digits;
@@ -22,7 +23,7 @@ public class Spam extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	@ElementCollection
+	@ElementCollection(fetch = FetchType.EAGER)
 	@NotEmpty
 	private List<String>		words;
 
