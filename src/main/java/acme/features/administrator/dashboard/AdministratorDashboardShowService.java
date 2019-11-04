@@ -29,8 +29,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "countAnnouncement", "countCompanyRecords", "countInvestorRecords", "minActiveRequest", "maxActiveRequest", "avgActiveRequest", "stDerivationActiveRequest", "minActiveOffer", "maxActiveOffer", "avgActiveOffer",
-			"stDerivationActiveOffer");
+		request.unbind(entity, model, "countAnnouncement", "countCompanyRecords", "countInvestorRecords", "minActiveRequest", "maxActiveRequest", "avgActiveRequest", "stDerivationActiveRequest", "minRangeMinActiveOffer", "maxRangeMinActiveOffer",
+			"avgRangeMinActiveOffer", "stDerivationRangeMinActiveOffer", "minRangeMaxActiveOffer", "maxRangeMaxActiveOffer", "avgRangeMaxActiveOffer", "stDerivationRangeMaxActiveOffer");
 
 	}
 
@@ -43,19 +43,22 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setCountAnnouncement(this.repository.countAnnouncement());
 		result.setCountCompanyRecords(this.repository.countCompanyRecord());
 		result.setCountInvestorRecords(this.repository.countInvestorRecords());
-		System.out.println(this.repository.minMaxAvgStDerivationActiveRequest());
-		result.setMinActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(0));
-		/*
-		 * result.setMaxActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(1));
-		 * result.setAvgActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(2));
-		 * result.setStDerivationActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(3));
-		 */
-		result.setMinActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(0));
-		/*
-		 * result.setMaxActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(1));
-		 * result.setAvgActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(2));
-		 * result.setStDerivationActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(3));
-		 */
+
+		result.setMinActiveRequest(this.repository.minActiveRequest());
+		result.setMaxActiveRequest(this.repository.maxActiveRequest());
+		result.setAvgActiveRequest(this.repository.avgActiveRequest());
+		result.setStDerivationActiveRequest(this.repository.stDerivationActiveRequest());
+
+		result.setMinRangeMinActiveOffer(this.repository.minRangeMinActiveOffer());
+		result.setMaxRangeMinActiveOffer(this.repository.maxRangeMinActiveOffer());
+		result.setAvgRangeMinActiveOffer(this.repository.avgRangeMinActiveOffer());
+		result.setStDerivationRangeMinActiveOffer(this.repository.stDerivationRangeMinActiveOffer());
+
+		result.setMinRangeMaxActiveOffer(this.repository.minRangeMaxActiveOffer());
+		result.setMaxRangeMaxActiveOffer(this.repository.maxRangeMaxActiveOffer());
+		result.setAvgRangeMaxActiveOffer(this.repository.avgRangeMaxActiveOffer());
+		result.setStDerivationRangeMaxActiveOffer(this.repository.stDerivationRangeMaxActiveOffer());
+
 		return result;
 	}
 }
