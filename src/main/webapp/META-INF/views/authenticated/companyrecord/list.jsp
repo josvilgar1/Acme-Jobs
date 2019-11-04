@@ -24,7 +24,8 @@
 	<acme:list-column code="authenticated.companyrecord.list.label.web" path="web" width="10%"/>		
 	<acme:list-column code="authenticated.companyrecord.list.label.phone" path="phone" width="10%"/>		
 	<acme:list-column code="authenticated.companyrecord.list.label.email" path="email" width="10%"/>		
-	<acme:list-column code="authenticated.companyrecord.list.label.incorporated" path="incorporated" width="10%"/>		
+	<acme:list-column code="authenticated.companyrecord.list.label.incorporated" path="incorporated" width="10%"/>
+	<acme:list-column code="anonymous.companyrecord.list.label.stars" path="stars" width="10%"/>				
 </acme:list>
 
 
