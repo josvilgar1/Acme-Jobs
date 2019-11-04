@@ -45,14 +45,17 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setCountInvestorRecords(this.repository.countInvestorRecords());
 		System.out.println(this.repository.minMaxAvgStDerivationActiveRequest());
 		result.setMinActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(0));
-		result.setMaxActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(1));
-		result.setAvgActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(2));
-		result.setStDerivationActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(3));
+		/*
+		 * result.setMaxActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(1));
+		 * result.setAvgActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(2));
+		 * result.setStDerivationActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(3));
+		 */
 		result.setMinActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(0));
-		result.setMaxActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(1));
-		result.setAvgActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(2));
-		result.setStDerivationActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(3));
-
+		/*
+		 * result.setMaxActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(1));
+		 * result.setAvgActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(2));
+		 * result.setStDerivationActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(3));
+		 */
 		return result;
 	}
 }
