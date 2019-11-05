@@ -71,6 +71,13 @@
 		<property name="stars" value="1"/>
   </bean>
   
+  <bean id="investorrecord04" class="acme.entities.investorrecords.Investorrecord">
+		<property name="name" value="Carl Icahn"/>
+		<property name="sector" value="Telecomunications"/>
+		<property name="statement" value="Statement4"/>
+		<property name="stars"><null/></property>
+  </bean>
+  
 	<!-- Companyrecord -->
     
 	<bean id="companyrecord01" class="acme.entities.companyrecords.Companyrecord">
@@ -118,7 +125,7 @@
 		<property name="phone" value="444887766"/>
 		<property name="email" value="email4@gmail.com"/>
 		<property name="incorporated" value="false"/>
-		<property name="stars" value="4"/>
+		<property name="stars" value="5"/>
 	</bean>
 	
 	<!-- Offer -->

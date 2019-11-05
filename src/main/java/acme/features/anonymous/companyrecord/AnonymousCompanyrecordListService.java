@@ -41,7 +41,11 @@ public class AnonymousCompanyrecordListService implements AbstractListService<An
 
 		Collection<Companyrecord> result;
 
-		result = this.repository.findMany();
+		if (request.getModel().getBoolean("onlybest")) {
+			result = this.repository.findManyBest();
+		} else {
+			result = this.repository.findMany();
+		}
 
 		return result;
 	}
