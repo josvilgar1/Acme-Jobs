@@ -1,6 +1,9 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,7 +46,6 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setCountAnnouncement(this.repository.countAnnouncement());
 		result.setCountCompanyRecords(this.repository.countCompanyRecord());
 		result.setCountInvestorRecords(this.repository.countInvestorRecords());
-		System.out.println(this.repository.minMaxAvgStDerivationActiveRequest());
 		result.setMinActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(0));
 		/*
 		 * result.setMaxActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(1));
@@ -56,6 +58,25 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		 * result.setAvgActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(2));
 		 * result.setStDerivationActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(3));
 		 */
+
+		Object[] numsectorscomp = this.repository.numSectorsByCompany();
+		Object[] sectorscomp = this.repository.sectorsByCompany();
+
+		List<Integer> n = new ArrayList<Integer>();
+		List<String> s = new ArrayList<String>();
+
+		int i = 0;
+		while (i < numsectorscomp.length) {
+			n.add(Integer.parseInt(numsectorscomp[i].toString()));
+			s.add(sectorscomp[i].toString());
+			i++;
+		}
+		System.out.println(n);
+		System.out.println(s);
+		result.setNumSectorbyCompany(n);
+		result.setSectorsbyCompany(s);
+		System.out.println(result.getNumSectorbyCompany());
+		System.out.println(result.getSectorsbyCompany());
 		return result;
 	}
 }
