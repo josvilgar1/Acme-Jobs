@@ -18,40 +18,13 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select count(i) from Investorrecord i")
 	Integer countInvestorRecords();
 
-	@Query("select min(r.reward.amount) from Request r where r.deadline > current_timestamp()")
-	Double minActiveRequest();
+	@Query("select min(r.reward.amount),max(r.reward.amount),avg(r.reward.amount),stddev(r.reward.amount) from Request r where r.deadline > current_timestamp()")
+	Double[][] queryActiveRequest();
 
-	@Query("select max(r.reward.amount) from Request r where r.deadline > current_timestamp()")
-	Double maxActiveRequest();
+	@Query("select min(r.rangeMin.amount),max(r.rangeMin.amount),avg(r.rangeMin.amount),stddev(r.rangeMin.amount) from Offer r where r.deadline > current_timestamp()")
+	Double[][] queryRangeMinActiveOffer();
 
-	@Query("select avg(r.reward.amount) from Request r where r.deadline > current_timestamp()")
-	Double avgActiveRequest();
-
-	@Query("select stddev(r.reward.amount) from Request r where r.deadline > current_timestamp()")
-	Double stDerivationActiveRequest();
-
-	@Query("select min(r.rangeMin.amount) from Offer r where r.deadline > current_timestamp()")
-	Double minRangeMinActiveOffer();
-
-	@Query("select max(r.rangeMin.amount) from Offer r where r.deadline > current_timestamp()")
-	Double maxRangeMinActiveOffer();
-
-	@Query("select avg(r.rangeMin.amount) from Offer r where r.deadline > current_timestamp()")
-	Double avgRangeMinActiveOffer();
-
-	@Query("select stddev(r.rangeMin.amount) from Offer r where r.deadline > current_timestamp()")
-	Double stDerivationRangeMinActiveOffer();
-
-	@Query("select min(r.rangeMax.amount) from Offer r where r.deadline > current_timestamp()")
-	Double minRangeMaxActiveOffer();
-
-	@Query("select max(r.rangeMax.amount) from Offer r where r.deadline > current_timestamp()")
-	Double maxRangeMaxActiveOffer();
-
-	@Query("select avg(r.rangeMax.amount) from Offer r where r.deadline > current_timestamp()")
-	Double avgRangeMaxActiveOffer();
-
-	@Query("select stddev(r.rangeMax.amount) from Offer r where r.deadline > current_timestamp()")
-	Double stDerivationRangeMaxActiveOffer();
+	@Query("select min(r.rangeMax.amount),max(r.rangeMax.amount),avg(r.rangeMax.amount),stddev(r.rangeMax.amount) from Offer r where r.deadline > current_timestamp()")
+	Double[][] queryRangeMaxActiveOffer();
 
 }
