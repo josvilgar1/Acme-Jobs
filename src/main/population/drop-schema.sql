@@ -31,13 +31,19 @@
 
     drop table if exists `authenticated`;
 
+    drop table if exists `banner`;
+
     drop table if exists `challenge`;
+
+    drop table if exists `commercial`;
 
     drop table if exists `companyrecord`;
 
     drop table if exists `consumer`;
 
     drop table if exists `investorrecord`;
+
+    drop table if exists `noncommercial`;
 
     drop table if exists `offer`;
 

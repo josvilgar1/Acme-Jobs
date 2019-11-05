@@ -17,7 +17,38 @@
 
 	<import resource="conversion-service.xml" />
 	
-  <!-- Investorrecord -->
+	
+	<!-- Banners -->	
+	
+	<bean id="banner01" class="acme.entities.banners.Commercial">
+		<property name="picture" value="http://www.us.es/design/USsite/images/logo.jpg"/>
+		<property name="slogan" value="Universidad de sevilla"/>
+		<property name="url" value="http://www.us.es"/>
+		<property name="creditCard" value="5495046230176764"/>
+	</bean>
+	
+	<bean id="banner02" class="acme.entities.banners.Commercial">
+		<property name="picture" value="https://www.informatica.us.es/images/logo-etsii251.png"/>
+		<property name="slogan" value="Escuela Superior de Ingeniería Informática"/>
+		<property name="url" value="https://www.informatica.us.es/"/>
+		<property name="creditCard" value="5495046230176764"/>
+	</bean>
+	
+	<bean id="banner03" class="acme.entities.banners.Noncommercial">
+		<property name="picture" value="https://www.informatica.us.es/images/logo-etsii251.png"/>
+		<property name="slogan" value="Escuela Superior de Ingeniería Informática"/>
+		<property name="url" value="https://www.informatica.us.es/"/>
+		<property name="jingle" value="https://www.youtube.com/watch?v=fvQywNndDxo"/>
+	</bean>
+	
+	<bean id="banner04" class="acme.entities.banners.Noncommercial">
+		<property name="picture" value="https://www.etsi.us.es/sites/all/themes/ETSI/imagenes/marco/logoETSI.png"/>
+		<property name="slogan" value="Escuela Superior de Ingeniería de Sevilla"/>
+		<property name="url" value="https://www.etsi.us.es/"/>
+		<property name="jingle"><null/></property>
+	</bean>
+
+	<!-- Investorrecord -->
   
 	<bean id="investorrecord01" class="acme.entities.investorrecords.Investorrecord">
 		<property name="name" value="John Bogle"/>
@@ -38,6 +69,13 @@
 		<property name="sector" value="Mining"/>
 		<property name="statement" value="Statement3"/>
 		<property name="stars" value="1"/>
+  </bean>
+  
+  <bean id="investorrecord04" class="acme.entities.investorrecords.Investorrecord">
+		<property name="name" value="Carl Icahn"/>
+		<property name="sector" value="Telecomunications"/>
+		<property name="statement" value="Statement4"/>
+		<property name="stars"><null/></property>
   </bean>
   
 	<!-- Companyrecord -->
@@ -87,7 +125,7 @@
 		<property name="phone" value="444887766"/>
 		<property name="email" value="email4@gmail.com"/>
 		<property name="incorporated" value="false"/>
-		<property name="stars" value="4"/>
+		<property name="stars" value="5"/>
 	</bean>
 	
 	<!-- Offer -->
