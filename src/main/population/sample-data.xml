@@ -94,7 +94,7 @@
 		<property name="phone" value="444887766"/>
 		<property name="email" value="email4@gmail.com"/>
 		<property name="incorporated" value="false"/>
-		<property name="stars" value="4"/>
+		<property name="stars" value="5"/>
 	</bean>
 	
 	<!-- Offer -->

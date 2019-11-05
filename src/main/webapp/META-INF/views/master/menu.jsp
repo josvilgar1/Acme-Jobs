@@ -20,6 +20,7 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+
 			<acme:menu-suboption code="master.menu.anonymous.investorrecords.all" action="/anonymous/investorrecord/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.investorrecords.best" action="/anonymous/investorrecord/list-best"/>
 			<acme:menu-separator/>
