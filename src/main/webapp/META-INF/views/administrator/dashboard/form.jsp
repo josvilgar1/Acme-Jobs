@@ -27,15 +27,22 @@
 		path="avgActiveRequest" />
 	<acme:form-textbox code="administrator.dashboard.form.lable.stDerivationActiveRequest"
 		path="stDerivationActiveRequest" />
-	<acme:form-textbox code="administrator.dashboard.form.lable.minActiveOffer"
-		path="minActiveOffer" />
-	<acme:form-textbox code="administrator.dashboard.form.lable.maxActiveOffer"
-		path="maxActiveOffer" />
-	<acme:form-textbox code="administrator.dashboard.form.lable.avgActiveOffer"
-		path="avgActiveOffer" />
-	<acme:form-textbox code="administrator.dashboard.form.lable.stDerivationActiveOffer"
-		path="stDerivationActiveOffer" />
-
+	<acme:form-textbox code="administrator.dashboard.form.lable.minRangeMinActiveOffer"
+		path="minRangeMinActiveOffer" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.maxRangeMinActiveOffer"
+		path="maxRangeMinActiveOffer" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.avgRangeMinActiveOffer"
+		path="avgRangeMinActiveOffer" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.stDerivationRangeMinActiveOffer"
+		path="stDerivationRangeMinActiveOffer" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.minRangeMaxActiveOffer"
+		path="minRangeMaxActiveOffer" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.maxRangeMaxActiveOffer"
+		path="maxRangeMaxActiveOffer" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.avgRangeMaxActiveOffer"
+		path="avgRangeMaxActiveOffer" />
+	<acme:form-textbox code="administrator.dashboard.form.lable.stDerivationRangeMaxActiveOffer"
+		path="stDerivationRangeMaxActiveOffer" />
 
 	<acme:form-return code="administrator.dashboard.form.button.return" />
 </acme:form>

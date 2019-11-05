@@ -1,6 +1,7 @@
 
 package acme.entities.companyrecords;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -38,10 +39,12 @@ public class Companyrecord extends DomainEntity {
 
 	@NotBlank
 	@Pattern(regexp = "^(\\+\\d{1,3})?(\\(\\d{1,4}\\))?\\d{6,10}$")
+	@Column(unique = true)
 	private String				phone;
 
 	@NotBlank
 	@Email
+	@Column(unique = true)
 	private String				email;
 
 	private Boolean				incorporated;
