@@ -419,6 +419,19 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+
+      <x>0</x>
+      <y>595</y>
+      <w>483</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Spam
+--
++words: List&lt;String&gt; {ElementCollection, NotEmpty}
++threshold: BigDecimal {Digits(integer = 3, fraction = 2), DecimalMin("0.00"), DecimalMax("100.00"), NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
       <x>252</x>
       <y>534</y>
       <w>246</w>
@@ -482,4 +495,5 @@ Non Comercial
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>150.0;10.0;10.0;90.0</additional_attributes>
   </element>
+
 </diagram>
