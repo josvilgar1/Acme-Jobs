@@ -33,7 +33,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "countAnnouncement", "countCompanyRecords", "countInvestorRecords", "minActiveRequest", "maxActiveRequest", "avgActiveRequest", "stDerivationActiveRequest", "minActiveOffer", "maxActiveOffer", "avgActiveOffer",
-			"stDerivationActiveOffer");
+			"stDerivationActiveOffer", "numSectorbyCompany", "sectorsbyCompany");
 
 	}
 
@@ -59,24 +59,21 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		 * result.setStDerivationActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(3));
 		 */
 
-		Object[] numsectorscomp = this.repository.numSectorsByCompany();
-		Object[] sectorscomp = this.repository.sectorsByCompany();
+		Object[] sectores = this.repository.sectores();
 
 		List<Integer> n = new ArrayList<Integer>();
 		List<String> s = new ArrayList<String>();
 
 		int i = 0;
-		while (i < numsectorscomp.length) {
-			n.add(Integer.parseInt(numsectorscomp[i].toString()));
-			s.add(sectorscomp[i].toString());
+		while (i < sectores.length) {
+			Object[] x = (Object[]) sectores[i];
+			n.add(Integer.parseInt(x[1].toString()));
+			s.add(x[0].toString());
 			i++;
 		}
-		System.out.println(n);
-		System.out.println(s);
+
 		result.setNumSectorbyCompany(n);
 		result.setSectorsbyCompany(s);
-		System.out.println(result.getNumSectorbyCompany());
-		System.out.println(result.getSectorsbyCompany());
 		return result;
 	}
 }

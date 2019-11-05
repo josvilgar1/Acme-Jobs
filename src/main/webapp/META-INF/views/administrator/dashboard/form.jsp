@@ -20,21 +20,21 @@
 	<canvas id="canvas"></canvas>
 </div>
 
-<script type="text/javascript">
+<script type="text/javascript"> 
 	$(document).ready(function(){
+		
 		var data = {
 				labels:[
-						<jstl:out value="${sectorbyCompany.get(0)}"/>,
-						<jstl:out value="${sectorbyCompany.get(1)}"/>,
-						<jstl:out value="${sectorbyCompany.get(2)}"/>,
-						<jstl:out value="${sectorbyCompany.get(3)}"/>
+					<jstl:forEach var="sector" items="${sectorbyCompany}">
+							<acme:message code="${sector}"/>
+					</jstl:forEach>
+
 					],
 				datasets:[{	
 						data:[
-							<jstl:out value="${numSectorbyCompany.get(0)}"/>,
-							<jstl:out value="${numSectorbyCompany.get(1)}"/>,
-							<jstl:out value="${numSectorbyCompany.get(2)}"/>,
-							<jstl:out value="${numSectorbyCompany.get(3)}"/>
+							<jstl:forEach var="num" items="${numSectorbyCompany}">
+								<acme:message code="${num}"/>
+							</jstl:forEach>
 						]		
 						}]
 			};
@@ -59,9 +59,14 @@
 			data : data,
 			options : options
 		});
+		
 	});	
 </script>
 
+<jstl:forEach var="sector" items="${sectorbyCompany}">
+					<acme:message code="${sector}"/>
+</jstl:forEach>	
+									
 <acme:form readonly="true">
 	<acme:form-textbox code="administrator.dashboard.form.lable.countAnnouncement" path="countAnnouncement" />
 	<acme:form-textbox code="administrator.dashboard.form.lable.countCompanyRecord" path="countCompanyRecords" />

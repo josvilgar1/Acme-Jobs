@@ -20,11 +20,8 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select count(i) from Investorrecord i")
 	Integer countInvestorRecords();
 
-	@Query("select count(g) from Companyrecord g group by g.sector")
-	Object[] numSectorsByCompany();
-
-	@Query("select g.sector from Companyrecord g group by g.sector")
-	Object[] sectorsByCompany();
+	@Query("select g.sector, count(g) from Companyrecord g group by g.sector")
+	Object[] sectores();
 
 	@Query("select min(r.reward.amount),max(r.reward.amount),avg(r.reward.amount),stddev(r.reward.amount) from Request r")
 	List<Double> minMaxAvgStDerivationActiveRequest();
