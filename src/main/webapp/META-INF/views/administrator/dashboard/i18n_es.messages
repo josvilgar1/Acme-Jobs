@@ -1,0 +1,23 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+administrator.dashboard.form.lable.countAnnouncement = countAnnouncement
+administrator.dashboard.form.lable.countCompanyRecord = countCompanyRecord
+administrator.dashboard.form.lable.countInvestorRecord = countInvestorRecord
+administrator.dashboard.form.lable.minActiveRequest = minActiveRequest
+administrator.dashboard.form.lable.maxActiveRequest = maxActiveRequest
+administrator.dashboard.form.lable.avgActiveRequest = avgActiveRequest
+administrator.dashboard.form.lable.stDerivationActiveRequest = stDerivationActiveRequest
+administrator.dashboard.form.lable.minActiveOffer = minActiveOffer
+administrator.dashboard.form.lable.maxActiveOffer = maxActiveOffer
+administrator.dashboard.form.lable.avgActiveOffer = avgActiveOffer
+administrator.dashboard.form.lable.stDerivationActiveOffer = stDerivationActiveOffer
+administrator.dashboard.form.button.return = Return
