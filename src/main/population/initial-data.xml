@@ -73,7 +73,7 @@
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
 	
-	<bean name="spam" class="acme.framework.entities.Spam">
+	<bean name="spam" class="acme.entities.configuration.Spam">
 		<property name="threshold" value="1.00" />
 		<property name="words" value="sex,viagra,cialis,nigeria,you’ve won,million dollar,sexo,hard core,has ganado,millón de dólares" />
 	</bean>

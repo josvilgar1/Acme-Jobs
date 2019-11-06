@@ -19,6 +19,6 @@ public interface AnonymousCompanyrecordRepository extends AbstractRepository {
 	Collection<Companyrecord> findMany();
 
 	@Query("select i from Companyrecord i where i.stars = 5")
-	Collection<Companyrecord> findManyBest();
+	Collection<Companyrecord> findManyTop();
 
 }

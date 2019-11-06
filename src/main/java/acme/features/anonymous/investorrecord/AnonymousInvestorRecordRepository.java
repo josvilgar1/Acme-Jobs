@@ -19,5 +19,5 @@ public interface AnonymousInvestorRecordRepository extends AbstractRepository {
 	Investorrecord findOneById(int id);
 
 	@Query("select i from Investorrecord i where i.stars = 5")
-	Collection<Investorrecord> findManyBest();
+	Collection<Investorrecord> findManyTop();
 }

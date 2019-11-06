@@ -40,7 +40,7 @@ public class AnonymousInvestorRecordListBestService implements AbstractListServi
 
 		Collection<Investorrecord> result;
 
-		result = this.repository.findManyBest();
+		result = this.repository.findManyTop();
 
 		return result;
 	}

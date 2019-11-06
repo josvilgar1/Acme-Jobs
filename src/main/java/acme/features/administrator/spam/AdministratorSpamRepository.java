@@ -6,7 +6,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.framework.entities.Spam;
+import acme.entities.configuration.Spam;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository

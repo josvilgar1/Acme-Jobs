@@ -40,7 +40,7 @@ public class AnonymousCompanyrecordListBestService implements AbstractListServic
 
 		Collection<Companyrecord> result;
 
-		result = this.repository.findManyBest();
+		result = this.repository.findManyTop();
 
 		return result;
 	}
