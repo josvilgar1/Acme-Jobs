@@ -21,11 +21,13 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select g.sector, count(g) from Companyrecord g group by g.sector")
 	Object[] sectores();
 
-	@Query("select min(r.reward.amount),max(r.reward.amount),avg(r.reward.amount),stddev(r.reward.amount) from Request r")
-	List<Double> minMaxAvgStDerivationActiveRequest();
+	@Query("select min(r.reward.amount),max(r.reward.amount),avg(r.reward.amount),stddev(r.reward.amount) from Request r where r.deadline > current_timestamp()")
+	Double[][] queryActiveRequest();
 
-	@Query("select stddev(r.rangeMax.amount) from Offer r where r.deadline > current_timestamp()")
-	Double stDerivationRangeMaxActiveOffer();
+	@Query("select min(r.rangeMin.amount),max(r.rangeMin.amount),avg(r.rangeMin.amount),stddev(r.rangeMin.amount) from Offer r where r.deadline > current_timestamp()")
+	Double[][] queryRangeMinActiveOffer();
 
+	@Query("select min(r.rangeMax.amount),max(r.rangeMax.amount),avg(r.rangeMax.amount),stddev(r.rangeMax.amount) from Offer r where r.deadline > current_timestamp()")
+	Double[][] queryRangeMaxActiveOffer();
 
 }

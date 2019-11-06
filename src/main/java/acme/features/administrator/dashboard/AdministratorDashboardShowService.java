@@ -32,9 +32,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
+		request.unbind(entity, model, "countAnnouncement", "countCompanyRecords", "countInvestorRecords", "minActiveRequest", "maxActiveRequest", "avgActiveRequest", "stDerivationActiveRequest", "minRangeMinActiveOffer", "maxRangeMinActiveOffer",
+			"avgRangeMinActiveOffer", "stDerivationRangeMinActiveOffer", "minRangeMaxActiveOffer", "maxRangeMaxActiveOffer", "avgRangeMaxActiveOffer", "stDerivationRangeMaxActiveOffer", "numSectorbyCompany", "sectorsbyCompany");
 
-		request.unbind(entity, model, "countAnnouncement", "countCompanyRecords", "countInvestorRecords", "minActiveRequest", "maxActiveRequest", "avgActiveRequest", "stDerivationActiveRequest", "minActiveOffer", "maxActiveOffer", "avgActiveOffer",
-			"stDerivationActiveOffer", "numSectorbyCompany", "sectorsbyCompany");
 	}
 
 	@Override
@@ -47,18 +47,20 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setCountCompanyRecords(this.repository.countCompanyRecord());
 		result.setCountInvestorRecords(this.repository.countInvestorRecords());
 
-		result.setMinActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(0));
-		/*
-		 * result.setMaxActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(1));
-		 * result.setAvgActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(2));
-		 * result.setStDerivationActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(3));
-		 */
-		result.setMinActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(0));
-		/*
-		 * result.setMaxActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(1));
-		 * result.setAvgActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(2));
-		 * result.setStDerivationActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(3));
-		 */
+		result.setMinActiveRequest(this.repository.queryActiveRequest()[0][0]);
+		result.setMaxActiveRequest(this.repository.queryActiveRequest()[0][1]);
+		result.setAvgActiveRequest(this.repository.queryActiveRequest()[0][2]);
+		result.setStDerivationActiveRequest(this.repository.queryActiveRequest()[0][3]);
+
+		result.setMinRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][0]);
+		result.setMaxRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][1]);
+		result.setAvgRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][2]);
+		result.setStDerivationRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][3]);
+
+		result.setMinRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][0]);
+		result.setMaxRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][1]);
+		result.setAvgRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][2]);
+		result.setStDerivationRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][3]);
 
 		Object[] sectores = this.repository.sectores();
 
@@ -75,7 +77,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 		result.setNumSectorbyCompany(n);
 		result.setSectorsbyCompany(s);
-    
+
 		return result;
 	}
 }
