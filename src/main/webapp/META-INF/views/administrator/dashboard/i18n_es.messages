@@ -8,20 +8,21 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.dashboard.form.lable.sectors = Sectores
-administrator.dashboard.form.lable.countAnnouncement = countAnnouncement
-administrator.dashboard.form.lable.countCompanyRecord = countCompanyRecord
-administrator.dashboard.form.lable.countInvestorRecord = countInvestorRecord
-administrator.dashboard.form.lable.minActiveRequest = Min Solicitudes activas
-administrator.dashboard.form.lable.maxActiveRequest = Max Solicitudes activas
-administrator.dashboard.form.lable.avgActiveRequest = Media Solicitudes activas
-administrator.dashboard.form.lable.stDerivationActiveRequest = Derivacion estandar Solicitudes activas
-administrator.dashboard.form.lable.minRangeMinActiveOffer = Min rango minimo Oferta
-administrator.dashboard.form.lable.maxRangeMinActiveOffer = Max rango minimo Oferta
-administrator.dashboard.form.lable.avgRangeMinActiveOffer = Media rango minimo Oferta
-administrator.dashboard.form.lable.stDerivationRangeMinActiveOffer = Derivacion estandar rango minimo Oferta
-administrator.dashboard.form.lable.minRangeMaxActiveOffer = Min rango maximo Oferta
-administrator.dashboard.form.lable.maxRangeMaxActiveOffer = Max rango maximo Oferta
-administrator.dashboard.form.lable.avgRangeMaxActiveOffer = Media rango maximo Oferta
-administrator.dashboard.form.lable.stDerivationRangeMaxActiveOffer = Derivacion estandar rango maximo Oferta
-administrator.dashboard.form.button.return = Return
+administrator.dashboard.form.lable.sectorspercompany = Número de compañías por cada sector
+administrator.dashboard.form.lable.sectorsperinvestor = Número de inversores por cada sector
+administrator.dashboard.form.lable.countAnnouncement = Numero total de anuncios
+administrator.dashboard.form.lable.countCompanyRecord = Numero total de compañías
+administrator.dashboard.form.lable.countInvestorRecord = Numero total de inversores
+administrator.dashboard.form.lable.minActiveRequest = Recompensa mínima de las solicitudes activas
+administrator.dashboard.form.lable.maxActiveRequest = Recompensa máxima de las solicitudes activas
+administrator.dashboard.form.lable.avgActiveRequest = Recompensa media de las solicitudes activas
+administrator.dashboard.form.lable.stDerivationActiveRequest = Desviación estándar de las recompensas de las solicitudes activas
+administrator.dashboard.form.lable.minRangeMinActiveOffer = Mínima recompensa mínima de las ofertas activas
+administrator.dashboard.form.lable.maxRangeMinActiveOffer = Máxima recompensa mínima de las ofertas activas
+administrator.dashboard.form.lable.avgRangeMinActiveOffer = Media de las recompensas mínimas de las ofertas activas
+administrator.dashboard.form.lable.stDerivationRangeMinActiveOffer = Desviación Estándar de las recompensas mínimas de las ofertas activas
+administrator.dashboard.form.lable.minRangeMaxActiveOffer = Mínima recompensa máxima de las ofertas activas
+administrator.dashboard.form.lable.maxRangeMaxActiveOffer = Máxima recompensa máxima de las ofertas activas
+administrator.dashboard.form.lable.avgRangeMaxActiveOffer = Media de las recompensas máximas de las ofertas activas
+administrator.dashboard.form.lable.stDerivationRangeMaxActiveOffer = Desviación Estándar de las recompensas máximas de las ofertas activas
+administrator.dashboard.form.button.return = Volver

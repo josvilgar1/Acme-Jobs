@@ -32,9 +32,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
+		request.unbind(entity, model, "countAnnouncement", "countCompanyRecords", "countInvestorRecords", "minActiveRequest", "maxActiveRequest", "avgActiveRequest", "stDerivationActiveRequest", "minRangeMinActiveOffer", "maxRangeMinActiveOffer",
+			"avgRangeMinActiveOffer", "stDerivationRangeMinActiveOffer", "minRangeMaxActiveOffer", "maxRangeMaxActiveOffer", "avgRangeMaxActiveOffer", "stDerivationRangeMaxActiveOffer", "numSectorbyCompany", "sectorsbyCompany", "numSectorbyInvestor",
+			"sectorsbyInvestor");
 
-		request.unbind(entity, model, "countAnnouncement", "countCompanyRecords", "countInvestorRecords", "minActiveRequest", "maxActiveRequest", "avgActiveRequest", "stDerivationActiveRequest", "minActiveOffer", "maxActiveOffer", "avgActiveOffer",
-			"stDerivationActiveOffer", "numSectorbyCompany", "sectorsbyCompany");
 	}
 
 	@Override
@@ -47,35 +48,53 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setCountCompanyRecords(this.repository.countCompanyRecord());
 		result.setCountInvestorRecords(this.repository.countInvestorRecords());
 
-		result.setMinActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(0));
-		/*
-		 * result.setMaxActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(1));
-		 * result.setAvgActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(2));
-		 * result.setStDerivationActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(3));
-		 */
-		result.setMinActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(0));
-		/*
-		 * result.setMaxActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(1));
-		 * result.setAvgActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(2));
-		 * result.setStDerivationActiveOffer(this.repository.minMaxAvgStDerivationActiveOffer().get(3));
-		 */
+		result.setMinActiveRequest(this.repository.queryActiveRequest()[0][0]);
+		result.setMaxActiveRequest(this.repository.queryActiveRequest()[0][1]);
+		result.setAvgActiveRequest(this.repository.queryActiveRequest()[0][2]);
+		result.setStDerivationActiveRequest(this.repository.queryActiveRequest()[0][3]);
 
-		Object[] sectores = this.repository.sectores();
+		result.setMinRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][0]);
+		result.setMaxRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][1]);
+		result.setAvgRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][2]);
+		result.setStDerivationRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][3]);
 
-		List<Integer> n = new ArrayList<Integer>();
-		List<String> s = new ArrayList<String>();
+		result.setMinRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][0]);
+		result.setMaxRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][1]);
+		result.setAvgRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][2]);
+		result.setStDerivationRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][3]);
 
-		int i = 0;
-		while (i < sectores.length) {
-			Object[] x = (Object[]) sectores[i];
-			n.add(Integer.parseInt(x[1].toString()));
-			s.add(x[0].toString());
-			i++;
+		Object[] sectorescompany = this.repository.sectorspercompany();
+
+		List<Integer> nc = new ArrayList<Integer>();
+		List<String> sc = new ArrayList<String>();
+
+		int ic = 0;
+		while (ic < sectorescompany.length) {
+			Object[] x = (Object[]) sectorescompany[ic];
+			nc.add(Integer.parseInt(x[1].toString()));
+			sc.add(x[0].toString());
+			ic++;
 		}
 
-		result.setNumSectorbyCompany(n);
-		result.setSectorsbyCompany(s);
-    
+		result.setNumSectorbyCompany(nc);
+		result.setSectorsbyCompany(sc);
+
+		Object[] sectoresinvestor = this.repository.sectorsperinvestor();
+
+		List<Integer> ni = new ArrayList<Integer>();
+		List<String> si = new ArrayList<String>();
+
+		int ii = 0;
+		while (ii < sectoresinvestor.length) {
+			Object[] x = (Object[]) sectoresinvestor[ii];
+			ni.add(Integer.parseInt(x[1].toString()));
+			si.add(x[0].toString());
+			ii++;
+		}
+
+		result.setNumSectorbyInvestor(ni);
+		result.setSectorsbyInvestor(si);
+
 		return result;
 	}
 }

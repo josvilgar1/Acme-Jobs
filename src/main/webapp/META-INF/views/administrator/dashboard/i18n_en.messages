@@ -8,20 +8,21 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.dashboard.form.lable.sectors = Sectors
-administrator.dashboard.form.lable.countAnnouncement = countAnnouncement
-administrator.dashboard.form.lable.countCompanyRecord = countCompanyRecord
-administrator.dashboard.form.lable.countInvestorRecord = countInvestorRecord
-administrator.dashboard.form.lable.minActiveRequest = Min active Request
-administrator.dashboard.form.lable.maxActiveRequest = Max active Request
-administrator.dashboard.form.lable.avgActiveRequest = Average active Request
-administrator.dashboard.form.lable.stDerivationActiveRequest = Standard derivation active Request
-administrator.dashboard.form.lable.minRangeMinActiveOffer = Min range minimun active Offer
-administrator.dashboard.form.lable.maxRangeMinActiveOffer = Max range minimun active Offer
-administrator.dashboard.form.lable.avgRangeMinActiveOffer = Average range minimun active Offer
-administrator.dashboard.form.lable.stDerivationRangeMinActiveOffer = Standard derivationrange minimun active Offer
-administrator.dashboard.form.lable.minRangeMaxActiveOffer = Min range maximun active Offer
-administrator.dashboard.form.lable.maxRangeMaxActiveOffer = Max range maximun active Offer
-administrator.dashboard.form.lable.avgRangeMaxActiveOffer = Average range maximun active Offer
-administrator.dashboard.form.lable.stDerivationRangeMaxActiveOffer = Standard derivation range maximun active Offer
+administrator.dashboard.form.lable.sectorspercompany = Number of companies per sector
+administrator.dashboard.form.lable.sectorsperinvestor = Number of investors per sector
+administrator.dashboard.form.lable.countAnnouncement = Total number of Announcements
+administrator.dashboard.form.lable.countCompanyRecord = Total number of Company Records
+administrator.dashboard.form.lable.countInvestorRecord = Total number of Investor Records
+administrator.dashboard.form.lable.minActiveRequest = Minimum reward of the active requests
+administrator.dashboard.form.lable.maxActiveRequest = Maximum reward of the active requests
+administrator.dashboard.form.lable.avgActiveRequest = Average reward of the active requests
+administrator.dashboard.form.lable.stDerivationActiveRequest = Standard deviation reward of the active requests
+administrator.dashboard.form.lable.minRangeMinActiveOffer = Minimum minimum reward of the active offers
+administrator.dashboard.form.lable.maxRangeMinActiveOffer = Maximum minimum reward of the active offers
+administrator.dashboard.form.lable.avgRangeMinActiveOffer = Average of the minimum rewards of the active offers
+administrator.dashboard.form.lable.stDerivationRangeMinActiveOffer = Standard deviation of the minimum rewards of the active offers
+administrator.dashboard.form.lable.minRangeMaxActiveOffer = Minimum maximum reward of the active offers
+administrator.dashboard.form.lable.maxRangeMaxActiveOffer = Maximum maximum reward of the active offers
+administrator.dashboard.form.lable.avgRangeMaxActiveOffer = Average of the maximum rewards of the active offers
+administrator.dashboard.form.lable.stDerivationRangeMaxActiveOffer = Standard deviation of the minimum rewards of the active offers
 administrator.dashboard.form.button.return = Return

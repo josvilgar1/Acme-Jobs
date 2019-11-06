@@ -317,8 +317,8 @@ Offer
 +deadline: Date {Temporal(TIMESTAMP)}
 +text: String {NotBlank}
 +ticker: String {Unique, NotBlank, Pattern(^O[A-Z]{4}-\d{4}$)}
-+rangeMin: Money {NotBlank}
-+rangeMax: Money {NotBlank}
++rangeMin: Money {Valid}
++rangeMax: Money {Valid}
  </panel_attributes>
     <additional_attributes/>
   </element>
@@ -393,9 +393,14 @@ Investor Records
 Challenges
 --
 +title: String {NotBlank}
-+deadline: Date {Temporal(TIMESTAMP), Future}
++deadline: Date {Temporal(TIMESTAMP)}
 +description: String {NotBlank}
-+goalreward: Map&lt;String,Reward&gt; {NotBlank}</panel_attributes>
++goalGold: String{NotBlank}
++goalSilver: String{NotBlank}
++goalBronze: String{NotBlank}
++rewardGold: Money{Valid}
++rewardSilver: Money{Valid}
++rewardBronze: Money{Valid}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -420,7 +425,7 @@ bg=orange</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>891</y>
+      <y>765</y>
       <w>720</w>
       <h>81</h>
     </coordinates>

@@ -20,11 +20,17 @@ public class Dashboard implements Serializable {
 	Double						maxActiveRequest;
 	Double						avgActiveRequest;
 	Double						stDerivationActiveRequest;
-	Double						minActiveOffer;
-	Double						maxActiveOffer;
-	Double						avgActiveOffer;
-	Double						stDerivationActiveOffer;
+	Double						minRangeMinActiveOffer;
+	Double						maxRangeMinActiveOffer;
+	Double						avgRangeMinActiveOffer;
+	Double						stDerivationRangeMinActiveOffer;
+	Double						minRangeMaxActiveOffer;
+	Double						maxRangeMaxActiveOffer;
+	Double						avgRangeMaxActiveOffer;
+	Double						stDerivationRangeMaxActiveOffer;
 	List<Integer>				numSectorbyCompany;
 	List<String>				sectorsbyCompany;
+	List<Integer>				numSectorbyInvestor;
+	List<String>				sectorsbyInvestor;
 	//Object[]					InvestorsSectors;
 }
