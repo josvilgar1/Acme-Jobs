@@ -18,4 +18,7 @@ public interface AuthenticatedRequestRepository extends AbstractRepository {
 	@Query("select r from Request r")
 	Collection<Request> findManyAll();
 
+	@Query("select r from Request r where r.deadline > current_timestamp()")
+	Collection<Request> findManyAllActive();
+
 }

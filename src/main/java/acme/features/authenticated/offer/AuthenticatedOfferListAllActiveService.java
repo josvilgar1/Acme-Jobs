@@ -13,7 +13,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedOfferListService implements AbstractListService<Authenticated, Offer> {
+public class AuthenticatedOfferListAllActiveService implements AbstractListService<Authenticated, Offer> {
 
 	@Autowired
 	AuthenticatedOfferRepository repository;
@@ -41,7 +41,7 @@ public class AuthenticatedOfferListService implements AbstractListService<Authen
 
 		Collection<Offer> result;
 
-		result = this.repository.findMany();
+		result = this.repository.findManyAllActive();
 
 		return result;
 	}

@@ -44,7 +44,15 @@
         `version` integer not null,
         `deadline` datetime(6),
         `description` varchar(255),
-        `goalreward` varchar(255),
+        `goal_bronze` varchar(255),
+        `goal_gold` varchar(255),
+        `goal_silver` varchar(255),
+        `reward_bronze_amount` double precision,
+        `reward_bronze_currency` varchar(255),
+        `reward_gold_amount` double precision,
+        `reward_gold_currency` varchar(255),
+        `reward_silver_amount` double precision,
+        `reward_silver_currency` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -143,13 +151,9 @@
     create table `spam` (
        `id` integer not null,
         `version` integer not null,
-        `threshold` decimal(19,2),
+        `threshold` double precision,
+        `words` varchar(255),
         primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `spam_words` (
-       `spam_id` integer not null,
-        `words` varchar(255)
     ) engine=InnoDB;
 
     create table `user_account` (
@@ -209,8 +213,3 @@
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
-    alter table `spam_words` 
-       add constraint `FK4qnhm8i2besmx55gwyqbwjn6p` 
-       foreign key (`spam_id`) 
-       references `spam` (`id`);
