@@ -15,7 +15,6 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-		
 <div>
 	<canvas id="canvas"></canvas>
 </div>
@@ -84,6 +83,6 @@
 		path="avgActiveOffer" />
 	<acme:form-textbox code="administrator.dashboard.form.lable.stDerivationActiveOffer"
 		path="stDerivationActiveOffer" />
-
+  
 	<acme:form-return code="administrator.dashboard.form.button.return" />
 </acme:form>

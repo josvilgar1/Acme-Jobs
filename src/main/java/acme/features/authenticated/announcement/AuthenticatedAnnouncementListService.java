@@ -1,6 +1,7 @@
 
 package acme.features.authenticated.announcement;
 
+import java.util.Calendar;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +41,11 @@ public class AuthenticatedAnnouncementListService implements AbstractListService
 		assert request != null;
 
 		Collection<Announcement> result;
+		Calendar actualDate = Calendar.getInstance();
 
-		result = this.repository.findMany();
+		actualDate.set(actualDate.get(Calendar.YEAR), actualDate.get(Calendar.MONTH) - 1, actualDate.get(Calendar.DAY_OF_MONTH));
+
+		result = this.repository.findManyLessThanMonth(actualDate.getTime());
 
 		return result;
 	}

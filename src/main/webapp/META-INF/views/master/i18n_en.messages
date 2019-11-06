@@ -16,8 +16,7 @@ master.banner.background = #BDD7EE
 
 master.welcome.title = Welcome!
 master.welcome.text = \
-	Welcome to Acme Jobs! Never before has it been easier to get your \
-	Job!
+	Welcome to Acme Jobs!
 
 # master.menu #################################################################
 
@@ -42,6 +41,7 @@ master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.announcement = List Announcements
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.spam = Spam words
 master.menu.administrator.shutdown = Shut down
 
 # master.menu.authenticated ###################################################

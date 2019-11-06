@@ -30,6 +30,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `url` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -37,6 +46,16 @@
         `description` varchar(255),
         `goalreward` varchar(255),
         `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `commercial` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `url` varchar(255),
+        `credit_card` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -71,6 +90,16 @@
         `sector` varchar(255),
         `stars` integer,
         `statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `noncommercial` (
+       `id` integer not null,
+        `version` integer not null,
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `url` varchar(255),
+        `jingle` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -111,6 +140,18 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `spam` (
+       `id` integer not null,
+        `version` integer not null,
+        `threshold` decimal(19,2),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `spam_words` (
+       `spam_id` integer not null,
+        `words` varchar(255)
+    ) engine=InnoDB;
+
     create table `user_account` (
        `id` integer not null,
         `version` integer not null,
@@ -128,6 +169,9 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+
+    alter table `request` 
+       add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -156,3 +200,8 @@
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `spam_words` 
+       add constraint `FK4qnhm8i2besmx55gwyqbwjn6p` 
+       foreign key (`spam_id`) 
+       references `spam` (`id`);

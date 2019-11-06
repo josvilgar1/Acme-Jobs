@@ -1,8 +1,6 @@
 
 package acme.features.administrator.dashboard;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -26,7 +24,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select min(r.reward.amount),max(r.reward.amount),avg(r.reward.amount),stddev(r.reward.amount) from Request r")
 	List<Double> minMaxAvgStDerivationActiveRequest();
 
-	@Query("select min(r.reward.amount),max(r.reward.amount),avg(r.reward.amount),stddev(r.reward.amount) from Request r")
-	List<Double> minMaxAvgStDerivationActiveOffer();
+	@Query("select stddev(r.rangeMax.amount) from Offer r where r.deadline > current_timestamp()")
+	Double stDerivationRangeMaxActiveOffer();
 
 }

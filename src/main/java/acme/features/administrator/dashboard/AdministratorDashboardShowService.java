@@ -32,9 +32,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert entity != null;
 		assert model != null;
 
+
 		request.unbind(entity, model, "countAnnouncement", "countCompanyRecords", "countInvestorRecords", "minActiveRequest", "maxActiveRequest", "avgActiveRequest", "stDerivationActiveRequest", "minActiveOffer", "maxActiveOffer", "avgActiveOffer",
 			"stDerivationActiveOffer", "numSectorbyCompany", "sectorsbyCompany");
-
 	}
 
 	@Override
@@ -46,6 +46,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setCountAnnouncement(this.repository.countAnnouncement());
 		result.setCountCompanyRecords(this.repository.countCompanyRecord());
 		result.setCountInvestorRecords(this.repository.countInvestorRecords());
+
 		result.setMinActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(0));
 		/*
 		 * result.setMaxActiveRequest(this.repository.minMaxAvgStDerivationActiveRequest().get(1));
@@ -74,6 +75,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 		result.setNumSectorbyCompany(n);
 		result.setSectorsbyCompany(s);
+    
 		return result;
 	}
 }
