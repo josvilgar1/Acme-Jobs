@@ -44,20 +44,20 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setCountCompanyRecords(this.repository.countCompanyRecord());
 		result.setCountInvestorRecords(this.repository.countInvestorRecords());
 
-		result.setMinActiveRequest(this.repository.minActiveRequest());
-		result.setMaxActiveRequest(this.repository.maxActiveRequest());
-		result.setAvgActiveRequest(this.repository.avgActiveRequest());
-		result.setStDerivationActiveRequest(this.repository.stDerivationActiveRequest());
+		result.setMinActiveRequest(this.repository.queryActiveRequest()[0][0]);
+		result.setMaxActiveRequest(this.repository.queryActiveRequest()[0][1]);
+		result.setAvgActiveRequest(this.repository.queryActiveRequest()[0][2]);
+		result.setStDerivationActiveRequest(this.repository.queryActiveRequest()[0][3]);
 
-		result.setMinRangeMinActiveOffer(this.repository.minRangeMinActiveOffer());
-		result.setMaxRangeMinActiveOffer(this.repository.maxRangeMinActiveOffer());
-		result.setAvgRangeMinActiveOffer(this.repository.avgRangeMinActiveOffer());
-		result.setStDerivationRangeMinActiveOffer(this.repository.stDerivationRangeMinActiveOffer());
+		result.setMinRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][0]);
+		result.setMaxRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][1]);
+		result.setAvgRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][2]);
+		result.setStDerivationRangeMinActiveOffer(this.repository.queryRangeMinActiveOffer()[0][3]);
 
-		result.setMinRangeMaxActiveOffer(this.repository.minRangeMaxActiveOffer());
-		result.setMaxRangeMaxActiveOffer(this.repository.maxRangeMaxActiveOffer());
-		result.setAvgRangeMaxActiveOffer(this.repository.avgRangeMaxActiveOffer());
-		result.setStDerivationRangeMaxActiveOffer(this.repository.stDerivationRangeMaxActiveOffer());
+		result.setMinRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][0]);
+		result.setMaxRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][1]);
+		result.setAvgRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][2]);
+		result.setStDerivationRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][3]);
 
 		return result;
 	}

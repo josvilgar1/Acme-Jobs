@@ -170,6 +170,15 @@
 
     insert into `hibernate_sequence` values ( 1 );
 
+    alter table `companyrecord` 
+       add constraint UK_ow69c893sgakbym2t21x9jrgt unique (`email`);
+
+    alter table `companyrecord` 
+       add constraint UK_7vrl4nc296g6ijlp9s5i4yg25 unique (`phone`);
+
+    alter table `offer` 
+       add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
+
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
 
