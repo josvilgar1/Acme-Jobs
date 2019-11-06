@@ -28,15 +28,13 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-
 master.menu.anonymous.favourite-link = Enlace favorito
-
 master.menu.anonymous.investorrecords.all = Archivos de inversionistas
 master.menu.anonymous.investorrecords.best = Top archivos de inversionistas
+master.menu.anonymous.announcement = Listar Anuncios
+master.menu.anonymous.companyrecord = Registros de la compañía
+master.menu.anonymous.companyrecord.best = Mejores Registros de la compañía
 
-master.menu.anonymous.announcement = Listar anuncios
-master.menu.anonymous.companyrecord.all = Todos los Registros de la compañía
-master.menu.anonymous.companyrecord.best = Top Registros de la compañía
 
 # master.menu.administrator ###################################################
 

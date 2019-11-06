@@ -23,13 +23,10 @@
 
 			<acme:menu-suboption code="master.menu.anonymous.investorrecords.all" action="/anonymous/investorrecord/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.investorrecords.best" action="/anonymous/investorrecord/list-best"/>
-			<acme:menu-separator/>		
-				
-		 	<!-- -------------------------------------------------------------
-		 		<acme:menu-suboption code="master.menu.anonymous.companyrecord" action="/anonymous/companyrecord/list"/>
-		 		--------------------------------------------------------------
-		 		-->
-		 		
+			<acme:menu-separator/>
+		 	<acme:menu-suboption code="master.menu.anonymous.companyrecord" action="/anonymous/companyrecord/list"/>
+		 	<acme:menu-suboption code="master.menu.anonymous.companyrecords.best" action="/anonymous/companyrecord/list-best"/>
+		 	<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.anonymous.announcement" action="/anonymous/announcement/list"/>
 		</acme:menu-option>
 

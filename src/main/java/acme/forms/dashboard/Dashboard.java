@@ -2,6 +2,7 @@
 package acme.forms.dashboard;
 
 import java.io.Serializable;
+import java.util.List;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -19,12 +20,11 @@ public class Dashboard implements Serializable {
 	Double						maxActiveRequest;
 	Double						avgActiveRequest;
 	Double						stDerivationActiveRequest;
-	Double						minRangeMinActiveOffer;
-	Double						maxRangeMinActiveOffer;
-	Double						avgRangeMinActiveOffer;
-	Double						stDerivationRangeMinActiveOffer;
-	Double						minRangeMaxActiveOffer;
-	Double						maxRangeMaxActiveOffer;
-	Double						avgRangeMaxActiveOffer;
-	Double						stDerivationRangeMaxActiveOffer;
+	Double						minActiveOffer;
+	Double						maxActiveOffer;
+	Double						avgActiveOffer;
+	Double						stDerivationActiveOffer;
+	List<Integer>				numSectorbyCompany;
+	List<String>				sectorsbyCompany;
+	//Object[]					InvestorsSectors;
 }
