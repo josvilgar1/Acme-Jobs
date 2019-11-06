@@ -24,19 +24,18 @@
 		
 		var data = {
 				labels:[
-					labels:[
-						<jstl:forEach var="sector" items="${sectorsbyCompany}">
-								<acme:message code="${sector}"/>,
-						</jstl:forEach>
-						],
-					datasets:[{	
-							label : "<acme:message code="administrator.dashboard.form.lable.sectors"/>",
-							data:[
-								<jstl:forEach var="num" items="${numSectorbyCompany}">
-									<acme:message code="${num}"/>,
-								</jstl:forEach>
-							]		
-							}]
+					<jstl:forEach var="sector" items="${sectorsbyCompany}">
+							"<acme:message code="${sector}"/>",
+					</jstl:forEach>
+					],
+				datasets:[{	
+						label : "<acme:message code="administrator.dashboard.form.lable.sectors"/>",
+						data:[
+							<jstl:forEach var="num" items="${numSectorbyCompany}">
+								<acme:message code="${num}"/>,
+							</jstl:forEach>
+						]		
+						}]
 			};
 		var options = {
 				scales:{ 

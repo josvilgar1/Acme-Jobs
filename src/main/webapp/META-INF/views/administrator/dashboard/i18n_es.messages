@@ -8,6 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+administrator.dashboard.form.lable.sectors = Sectores
 administrator.dashboard.form.lable.countAnnouncement = countAnnouncement
 administrator.dashboard.form.lable.countCompanyRecord = countCompanyRecord
 administrator.dashboard.form.lable.countInvestorRecord = countInvestorRecord
