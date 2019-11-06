@@ -25,15 +25,16 @@
 		
 		var data = {
 				labels:[
-					<jstl:forEach var="sector" items="${sectorbyCompany}">
-							<acme:message code="${sector}"/>
+					<jstl:forEach var="sector" items="${sectorsbyCompany}">
+							"<acme:message code="${sector}"/>",
 					</jstl:forEach>
 
 					],
 				datasets:[{	
+						label : "<acme:message code="administrator.dashboard.form.lable.sectors"/>",
 						data:[
 							<jstl:forEach var="num" items="${numSectorbyCompany}">
-								<acme:message code="${num}"/>
+								<acme:message code="${num}"/>,
 							</jstl:forEach>
 						]		
 						}]
@@ -62,10 +63,6 @@
 		
 	});	
 </script>
-
-<jstl:forEach var="sector" items="${sectorbyCompany}">
-					<acme:message code="${sector}"/>
-</jstl:forEach>	
 									
 <acme:form readonly="true">
 	<acme:form-textbox code="administrator.dashboard.form.lable.countAnnouncement" path="countAnnouncement" />
