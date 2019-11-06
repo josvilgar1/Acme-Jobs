@@ -33,7 +33,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "countAnnouncement", "countCompanyRecords", "countInvestorRecords", "minActiveRequest", "maxActiveRequest", "avgActiveRequest", "stDerivationActiveRequest", "minRangeMinActiveOffer", "maxRangeMinActiveOffer",
-			"avgRangeMinActiveOffer", "stDerivationRangeMinActiveOffer", "minRangeMaxActiveOffer", "maxRangeMaxActiveOffer", "avgRangeMaxActiveOffer", "stDerivationRangeMaxActiveOffer", "numSectorbyCompany", "sectorsbyCompany");
+			"avgRangeMinActiveOffer", "stDerivationRangeMinActiveOffer", "minRangeMaxActiveOffer", "maxRangeMaxActiveOffer", "avgRangeMaxActiveOffer", "stDerivationRangeMaxActiveOffer", "numSectorbyCompany", "sectorsbyCompany", "numSectorbyInvestor",
+			"sectorsbyInvestor");
 
 	}
 
@@ -62,21 +63,37 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setAvgRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][2]);
 		result.setStDerivationRangeMaxActiveOffer(this.repository.queryRangeMaxActiveOffer()[0][3]);
 
-		Object[] sectores = this.repository.sectores();
+		Object[] sectorescompany = this.repository.sectorspercompany();
 
-		List<Integer> n = new ArrayList<Integer>();
-		List<String> s = new ArrayList<String>();
+		List<Integer> nc = new ArrayList<Integer>();
+		List<String> sc = new ArrayList<String>();
 
-		int i = 0;
-		while (i < sectores.length) {
-			Object[] x = (Object[]) sectores[i];
-			n.add(Integer.parseInt(x[1].toString()));
-			s.add(x[0].toString());
-			i++;
+		int ic = 0;
+		while (ic < sectorescompany.length) {
+			Object[] x = (Object[]) sectorescompany[ic];
+			nc.add(Integer.parseInt(x[1].toString()));
+			sc.add(x[0].toString());
+			ic++;
 		}
 
-		result.setNumSectorbyCompany(n);
-		result.setSectorsbyCompany(s);
+		result.setNumSectorbyCompany(nc);
+		result.setSectorsbyCompany(sc);
+
+		Object[] sectoresinvestor = this.repository.sectorsperinvestor();
+
+		List<Integer> ni = new ArrayList<Integer>();
+		List<String> si = new ArrayList<String>();
+
+		int ii = 0;
+		while (ii < sectoresinvestor.length) {
+			Object[] x = (Object[]) sectoresinvestor[ii];
+			ni.add(Integer.parseInt(x[1].toString()));
+			si.add(x[0].toString());
+			ii++;
+		}
+
+		result.setNumSectorbyInvestor(ni);
+		result.setSectorsbyInvestor(si);
 
 		return result;
 	}

@@ -29,7 +29,7 @@
 					</jstl:forEach>
 					],
 				datasets:[{	
-						label : "<acme:message code="administrator.dashboard.form.lable.sectors"/>",
+						label : "<acme:message code="administrator.dashboard.form.lable.sectorspercompany"/>",
 						data:[
 							<jstl:forEach var="num" items="${numSectorbyCompany}">
 								<acme:message code="${num}"/>,
@@ -62,6 +62,52 @@
 	});	
 </script>
 									
+<div>
+	<canvas id="canvas2"></canvas>
+</div>
+
+<script type="text/javascript"> 
+	$(document).ready(function(){
+		
+		var data = {
+				labels:[
+					<jstl:forEach var="sectori" items="${sectorsbyInvestor}">
+							"<acme:message code="${sectori}"/>",
+					</jstl:forEach>
+					],
+				datasets:[{	
+						label : "<acme:message code="administrator.dashboard.form.lable.sectorsperinvestor"/>",
+						data:[
+							<jstl:forEach var="numi" items="${numSectorbyInvestor}">
+								<acme:message code="${numi}"/>,
+							</jstl:forEach>
+						]		
+						}]
+			};
+		var options = {
+				scales:{ 
+					yAxes:[{
+							ticks:{
+									suggestedMin: 0.0,
+									suggestedMax: 4.0
+							}
+					}]
+				},
+				legend: {display : true}
+		};
+		
+		var canvas, context;
+		
+		canvas = document.getElementById("canvas2");
+		context = canvas.getContext("2d");
+		new Chart(context,{
+			type : "bar",
+			data : data,
+			options : options
+		});
+		
+	});	
+</script>							
 <acme:form readonly="true">
 	<acme:form-textbox code="administrator.dashboard.form.lable.countAnnouncement" path="countAnnouncement" />
 	<acme:form-textbox code="administrator.dashboard.form.lable.countCompanyRecord" path="countCompanyRecords" />

@@ -30,5 +30,7 @@ public class Dashboard implements Serializable {
 	Double						stDerivationRangeMaxActiveOffer;
 	List<Integer>				numSectorbyCompany;
 	List<String>				sectorsbyCompany;
+	List<Integer>				numSectorbyInvestor;
+	List<String>				sectorsbyInvestor;
 	//Object[]					InvestorsSectors;
 }
