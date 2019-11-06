@@ -19,8 +19,7 @@
 <acme:list >
 	<acme:list-column code="authenticated.challenge.list.label.title" path="title" width="15%"/>
 	<acme:list-column code="authenticated.challenge.list.label.deadline" path="deadline" width="15%"/>
-	<acme:list-column code="authenticated.challenge.list.label.description" path="description" width="20%"/>
-	<acme:list-column code="authenticated.challenge.list.label.goalreward" path="goalreward" width="50%"/>		
+	<acme:list-column code="authenticated.challenge.list.label.description" path="description" width="70%"/>
 </acme:list>
 
 

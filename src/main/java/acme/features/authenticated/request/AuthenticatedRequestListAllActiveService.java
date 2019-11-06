@@ -1,47 +1,44 @@
 
-package acme.features.authenticated.offer;
+package acme.features.authenticated.request;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.offers.Offer;
+import acme.entities.request.Request;
 import acme.framework.components.Model;
-import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedOfferListService implements AbstractListService<Authenticated, Offer> {
+public class AuthenticatedRequestListAllActiveService implements AbstractListService<Authenticated, Request> {
 
 	@Autowired
-	AuthenticatedOfferRepository repository;
+	AuthenticatedRequestRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Offer> request) {
+	public boolean authorise(final acme.framework.components.Request<Request> request) {
 		assert request != null;
+
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Offer> request, final Offer entity, final Model model) {
+	public void unbind(final acme.framework.components.Request<Request> request, final Request entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
 		request.unbind(entity, model, "title", "moment", "deadline", "text");
-
 	}
 
 	@Override
-	public Collection<Offer> findMany(final Request<Offer> request) {
+	public Collection<Request> findMany(final acme.framework.components.Request<Request> request) {
 		assert request != null;
 
-		Collection<Offer> result;
-
-		result = this.repository.findMany();
+		Collection<Request> result = this.repository.findManyAllActive();
 
 		return result;
 	}

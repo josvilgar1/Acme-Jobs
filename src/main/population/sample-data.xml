@@ -143,7 +143,7 @@
 	<bean id="offer02" class="acme.entities.offers.Offer">
 		<property name="title" value="Title 2"/>
 		<property name="moment" value="2019/06/2 10:00"/>
-		<property name="deadline" value="2019/08/2 10:00"/>
+		<property name="deadline" value="2021/08/2 10:00"/>
 		<property name="text" value="Text 2"/>
 		<property name="ticker" value="OAAAA-2222"/>
 		<property name="rangeMin" value="200€"/>
@@ -163,7 +163,7 @@
 	<bean id="offer04" class="acme.entities.offers.Offer">
 		<property name="title" value="Title 4"/>
 		<property name="moment" value="2019/06/4 10:00"/>
-		<property name="deadline" value="2019/08/4 10:00"/>
+		<property name="deadline" value="2019/12/4 10:00"/>
 		<property name="text" value="Text 4"/>
 		<property name="ticker" value="OAAAA-4444"/>
 		<property name="rangeMin" value="400€"/>
@@ -184,7 +184,7 @@
 	<bean name="request02" class="acme.entities.request.Request">
 		<property name="title" value="title 02" />
 		<property name="moment" value="2019/10/25 10:00" />
-		<property name="deadline" value="2019/11/25 10:00" />
+		<property name="deadline" value="2019/12/20 10:00" />
 		<property name="text" value="text 02" />
 		<property name="reward" value="200€" />
 		<property name="ticker" value="RAAAA-0002" />
@@ -193,7 +193,7 @@
 	<bean name="request03" class="acme.entities.request.Request">
 		<property name="title" value="title 03" />
 		<property name="moment" value="2019/10/25 10:00" />
-		<property name="deadline" value="2019/11/25 10:00" />
+		<property name="deadline" value="2019/10/15 10:00" />
 		<property name="text" value="text 03" />
 		<property name="reward" value="300€" />
 		<property name="ticker" value="RAAAA-0003" />
@@ -235,20 +235,35 @@
 		<property name="title" value="Challenge 1"/>
 		<property name="deadline" value="2021/06/1 10:00"/>
 		<property name="description" value="Texto de descripcion del challenge 1"/>
-		<property name="goalreward" value="GOAL REWARD 1"/>
+		<property name="goalGold" value="GOAL GOLD 1"/>
+		<property name="goalSilver" value="GOAL SILVER 1"/>
+		<property name="goalBronze" value="GOAL BRONZE 1"/>
+		<property name="rewardGold" value="300€"/>
+		<property name="rewardSilver" value="200€"/>
+		<property name="rewardBronze" value="100€"/>
 	</bean>
 	
 	<bean id="challenge02" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Challenge 2"/>
 		<property name="deadline" value="2021/07/1 10:00"/>
 		<property name="description" value="Texto de descripcion del challenge 2"/>
-		<property name="goalreward" value="GOAL REWARD 2"/>
+		<property name="goalGold" value="GOAL GOLD 2"/>
+		<property name="goalSilver" value="GOAL SILVER 2"/>
+		<property name="goalBronze" value="GOAL BRONZE 2"/>
+		<property name="rewardGold" value="300€"/>
+		<property name="rewardSilver" value="200€"/>
+		<property name="rewardBronze" value="100€"/>
 	</bean>
 	
 	<bean id="challenge03" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Challenge 3"/>
-		<property name="deadline" value="2021/08/1 10:00"/>
+		<property name="deadline" value="2019/08/1 10:00"/>
 		<property name="description" value="Texto de descripcion del challenge 3"/>
-		<property name="goalreward" value="GOAL REWARD 3"/>
+		<property name="goalGold" value="GOAL GOLD 3"/>
+		<property name="goalSilver" value="GOAL SILVER 3"/>
+		<property name="goalBronze" value="GOAL BRONZE 3"/>
+		<property name="rewardGold" value="300€"/>
+		<property name="rewardSilver" value="200€"/>
+		<property name="rewardBronze" value="100€"/>
 	</bean>
 </beans>

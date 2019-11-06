@@ -75,25 +75,7 @@
 	
 	<bean name="spam" class="acme.framework.entities.Spam">
 		<property name="threshold" value="1.00" />
-		<property name="words">
-	        <list value-type="java.lang.String">
-	            <value>sex</value>
-	            <value>núcleo duro</value>
-	            <value>viagra</value>
-	            <value>cialis</value>
-	            <value>nigeria</value>
-	            <value>you’ve won</value>
-	            <value>million dollar</value>
-	            
-	            <value>sexo</value>
-	            <value>hard core</value>
-	            <value>viagra</value>
-	            <value>cialis</value>
-	            <value>nigeria</value>
-	            <value>has ganado</value>
-	            <value>millón de dólares</value>
-	        </list>
-   		</property>
+		<property name="words" value="sex,viagra,cialis,nigeria,you’ve won,million dollar,sexo,hard core,has ganado,millón de dólares" />
 	</bean>
 	
 </beans>

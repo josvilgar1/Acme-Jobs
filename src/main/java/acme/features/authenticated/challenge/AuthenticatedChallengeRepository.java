@@ -15,7 +15,10 @@ public interface AuthenticatedChallengeRepository extends AbstractRepository {
 	@Query("select a from Challenge a where a.id = ?1")
 	Challenge findOneById(int id);
 
-	@Query("select a from Challenge a where a.deadline > CURRENT_TIMESTAMP")
+	@Query("select a from Challenge a")
 	Collection<Challenge> findMany();
+
+	@Query("select a from Challenge a where a.deadline > current_timestamp()")
+	Collection<Challenge> findManyAllActive();
 
 }
