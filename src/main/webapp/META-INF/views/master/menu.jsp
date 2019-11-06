@@ -45,10 +45,10 @@
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
       		<acme:menu-suboption code="master.menu.authenticated.investorrecords" action="/authenticated/investorrecord/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.announcement" action="/authenticated/announcement/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.challenge" action="/authenticated/challenge/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.request" action="/authenticated/request/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.challenge.active" action="/authenticated/challenge/list-all-active"/>
+			<acme:menu-suboption code="master.menu.authenticated.request.active" action="/authenticated/request/list-all-active"/>
       		<acme:menu-suboption code="master.menu.authenticated.companyrecord" action="/authenticated/companyrecord/list"/>
-		 	<acme:menu-suboption code="master.menu.authenticated.offer" action="/authenticated/offer/list"/>
+		 	<acme:menu-suboption code="master.menu.authenticated.offer.active" action="/authenticated/offer/list-all-active"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">

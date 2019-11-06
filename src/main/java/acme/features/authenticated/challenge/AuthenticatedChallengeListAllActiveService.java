@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.challenge;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,13 +10,13 @@ import acme.entities.challenges.Challenge;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractShowService;
+import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedChallengeShowService implements AbstractShowService<Authenticated, Challenge> {
+public class AuthenticatedChallengeListAllActiveService implements AbstractListService<Authenticated, Challenge> {
 
 	@Autowired
-	private AuthenticatedChallengeRepository repository;
+	AuthenticatedChallengeRepository repository;
 
 
 	@Override
@@ -29,20 +31,19 @@ public class AuthenticatedChallengeShowService implements AbstractShowService<Au
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "goalGold", "goalSilver", "goalBronze", "rewardGold", "rewardSilver", "rewardBronze");
+		request.unbind(entity, model, "title", "deadline", "description");
 
 	}
 
 	@Override
-	public Challenge findOne(final Request<Challenge> request) {
+	public Collection<Challenge> findMany(final Request<Challenge> request) {
 		assert request != null;
 
-		Challenge result;
-		int id;
+		Collection<Challenge> result;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		result = this.repository.findManyAllActive();
 
 		return result;
 	}
+
 }

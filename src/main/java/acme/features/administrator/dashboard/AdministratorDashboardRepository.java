@@ -27,4 +27,5 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select stddev(r.rangeMax.amount) from Offer r where r.deadline > current_timestamp()")
 	Double stDerivationRangeMaxActiveOffer();
 
+
 }
